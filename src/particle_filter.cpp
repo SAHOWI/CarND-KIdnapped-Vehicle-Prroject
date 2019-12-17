@@ -311,6 +311,8 @@ string ParticleFilter::getAssociations(Particle best) {
   return s;
 }
 
+
+/*
 string ParticleFilter::getSenseCoord(Particle best, string coord) {
   vector<double> v;
 
@@ -325,4 +327,5 @@ string ParticleFilter::getSenseCoord(Particle best, string coord) {
   string s = ss.str();
   s = s.substr(0, s.length()-1);  // get rid of the trailing space
   return s;
-}
+} 
+*/
