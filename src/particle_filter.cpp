@@ -5,18 +5,21 @@
  * Author: Tiffany Huang
  */
 
-#include "particle_filter.h"
-
-#include <math.h>
+#include <random>
 #include <algorithm>
 #include <iostream>
-#include <iterator>
 #include <numeric>
-#include <random>
+#include <math.h>
+#include <iostream>
+#include <sstream>
 #include <string>
-#include <vector>
+#include <iterator>
 
-#include "helper_functions.h"
+#include "particle_filter.h"
+
+#define EPS 0.00001
+
+using namespace std;
 
 using std::string;
 using std::vector;
