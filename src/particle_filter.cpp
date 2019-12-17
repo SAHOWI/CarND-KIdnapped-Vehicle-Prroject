@@ -289,8 +289,8 @@ void ParticleFilter::SetAssociations(Particle& particle,
                                      const vector<double>& sense_x, 
                                      const vector<double>& sense_y) 
 */
-                   
-  Particle ParticleFilter::SetAssociations(Particle particle, std::vector<int> associations, std::vector<double> sense_x, std::vector<double> sense_y)                                   
+
+void Particle ParticleFilter::SetAssociations(Particle particle, std::vector<int> associations, std::vector<double> sense_x, std::vector<double> sense_y)                                   
   {
   // particle: the particle to which assign each listed association, 
   //   and association's (x,y) world coordinates mapping
