@@ -149,10 +149,15 @@ void ParticleFilter::dataAssociation(vector<LandmarkObs> predicted,
   }
 
 }
-
+/* REMOVE LATER 
 void ParticleFilter::updateWeights(double sensor_range, double std_landmark[], 
                                    const vector<LandmarkObs> &observations, 
                                    const Map &map_landmarks) {
+ 
+ */
+void ParticleFilter::updateWeights(double sensor_range, double std_landmark[],
+		std::vector<LandmarkObs> observations, Map map_landmarks) {
+
   /**
    * TODO: Update the weights of each particle using a mult-variate Gaussian 
    *   distribution. You can read more about this distribution here: 
