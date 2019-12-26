@@ -59,7 +59,7 @@ If you are working with the Udaycity Workspace:
 ![run the simulator](images/connected.PNG)
 
 - the simulation will start and teh simulator windows should look like this:
-![run the simulator](images/sim_running.PNG.PNG)
+![run the simulator](images/sim_running.PNG)
 
 - finally, when the simulator finished, the screen should look like the following, indicating a successful finish of the code
 ![run the simulator](images/passed.PNG)
