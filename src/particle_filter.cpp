@@ -17,9 +17,11 @@
 
 #include "particle_filter.h"
 
+using namespace std;
+
+/* EPS is used later to measure if yaw is not changing */
 #define EPS 0.00001
 
-using namespace std;
 
 void ParticleFilter::init(double x, double y, double theta, double std[]) {
 	// TODO: Set the number of particles. Initialize all particles to first position (based on estimates of
@@ -72,12 +74,12 @@ void ParticleFilter::prediction(double delta_t, double std_pos[], double velocit
   double std_y = std_pos[1];
   double std_theta = std_pos[2];
 
-  // Creating normal distributions
+  // Creating the normal distributions
   normal_distribution<double> dist_x(0, std_x);
   normal_distribution<double> dist_y(0, std_y);
   normal_distribution<double> dist_theta(0, std_theta);
 
-  // Calculate new state.
+  // Calculate the new state.
   for (int i = 0; i < num_particles; i++) {
 
   	double theta = particles[i].theta;
@@ -92,7 +94,7 @@ void ParticleFilter::prediction(double delta_t, double std_pos[], double velocit
       particles[i].theta += yaw_rate * delta_t;
     }
 
-    // Adding noise.
+    // Adding some noise.
     particles[i].x += dist_x(gen);
     particles[i].y += dist_y(gen);
     particles[i].theta += dist_theta(gen);
@@ -147,14 +149,15 @@ void ParticleFilter::updateWeights(double sensor_range, double std_landmark[],
 	//   and the following is a good resource for the actual equation to implement (look at equation
 	//   3.33
 	//   http://planning.cs.uiuc.edu/node99.html
+  
   double stdLandmarkRange = std_landmark[0];
   double stdLandmarkBearing = std_landmark[1];
 
   for (int i = 0; i < num_particles; i++) {
-
     double x = particles[i].x;
     double y = particles[i].y;
     double theta = particles[i].theta;
+  
     // Find landmarks in particle's range.
     double sensor_range_2 = sensor_range * sensor_range;
     vector<LandmarkObs> inRangeLandmarks;

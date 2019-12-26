@@ -10,6 +10,7 @@
 #define PARTICLE_FILTER_H_
 
 #include "helper_functions.h"
+
 #include <random>
 
 struct Particle {
@@ -33,7 +34,7 @@ class ParticleFilter {
 
   std::default_random_engine gen;
 
-	// Flag, if filter is initialized
+	// Is the filter already initialized ?
 	bool is_initialized;
 
 	// Vector of weights of all particles
@@ -110,13 +111,11 @@ public:
 	std::string getSenseY(Particle best);
 
 	/**
-	 * initialized Returns whether particle filter is initialized yet or not.
+	 * initialized() indicates if the filter is already initialized or not.
 	 */
 	const bool initialized() const {
 		return is_initialized;
 	}
 };
-
-
 
 #endif /* PARTICLE_FILTER_H_ */
