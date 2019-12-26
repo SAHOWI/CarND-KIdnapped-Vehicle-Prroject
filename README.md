@@ -17,7 +17,7 @@ Use the UDACITY provided scripts to build and run the filter:
 5. ./run.sh
 
 
-# Implementing the Particle Filter
+## Implementing the Particle Filter
 The directory structure of this repository is as follows:
 
 ```
@@ -42,3 +42,15 @@ CarND-Kidnapped-Vehicle-Project
 ```
 
 The particle filter is implemented using the files `particle_filter.cpp` and `particle_filter.h` in the src subdirctory.
+
+
+## Running the Particle-Filter
+
+If you are working with the Udaycity Workspace:
+- ensure that GPU mode is enabled (1)
+- start the Simumaltor Environment by clicking on [Simulator] button (2)
+![enable the environment](images/start-GPU.PNG)
+
+- within the Simulator Window Click on [Simulator] 
+- when the Simulator Windows opens select the right simulator and hit start
+![run the simulator](images/ProjectSelection.PNG)
