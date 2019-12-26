@@ -6,10 +6,12 @@
  *      Author: Tiffany Huang
  */
 
+
 #ifndef PARTICLE_FILTER_H_
 #define PARTICLE_FILTER_H_
 
 #include "helper_functions.h"
+
 #include <random>
 
 struct Particle {
