@@ -54,3 +54,14 @@ If you are working with the Udaycity Workspace:
 - within the Simulator Window Click on [Simulator] 
 - when the Simulator Windows opens select the right simulator and hit start
 ![run the simulator](images/ProjectSelection.PNG)
+
+- run the filter by executing ./run.sh from the base directory
+![run the simulator](images/connected.PNG)
+
+- the simulation will start and teh simulator windows should look like this:
+![run the simulator](images/sim_running.PNG.PNG)
+
+- finally, when the simulator finished, the screen should look like the following, indicating a successful finish of the code
+![run the simulator](images/passed.PNG)
+
+
